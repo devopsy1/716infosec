@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "a42ddd12-649b-4ddb-93ac-cc94103912b2",
+		"name": "716 InfoSec Python API",
+		"description": "Example GET and POST requests to Greynoise and Virustotal.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Greynoise",
+			"item": [
+				{
+					"name": "IP Context",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "p4Pt8hUyi9Jkm21YnjtM4fjAqe0qyLUpk6Q7GC0QCZth5sDEjbsZtjpHLhM5zhjE",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.greynoise.io/v2/noise/context/71.6.135.131",
+							"protocol": "https",
+							"host": [
+								"api",
+								"greynoise",
+								"io"
+							],
+							"path": [
+								"v2",
+								"noise",
+								"context",
+								"71.6.135.131"
+							]
+						},
+						"description": "Returns information about a given IP address including time ranges, IP metadata (network owner, ASN, reverse DNS pointer, country), associated actors, activity tags, and raw port scan and web request information."
+					},
+					"response": []
+				},
+				{
+					"name": "IP Quick Check",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "p4Pt8hUyi9Jkm21YnjtM4fjAqe0qyLUpk6Q7GC0QCZth5sDEjbsZtjpHLhM5zhjE",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.greynoise.io/v2/noise/quick/71.6.135.131",
+							"protocol": "https",
+							"host": [
+								"api",
+								"greynoise",
+								"io"
+							],
+							"path": [
+								"v2",
+								"noise",
+								"quick",
+								"71.6.135.131"
+							]
+						},
+						"description": "Check whether a given IP address is “Internet background noise”, or has been observed scanning or attacking devices across the Internet."
+					},
+					"response": []
+				},
+				{
+					"name": "IP Multi Quick Check",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "p4Pt8hUyi9Jkm21YnjtM4fjAqe0qyLUpk6Q7GC0QCZth5sDEjbsZtjpHLhM5zhjE",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.greynoise.io/v2/noise/multi/quick?ips=71.6.135.131,71.6.135.132",
+							"protocol": "https",
+							"host": [
+								"api",
+								"greynoise",
+								"io"
+							],
+							"path": [
+								"v2",
+								"noise",
+								"multi",
+								"quick"
+							],
+							"query": [
+								{
+									"key": "ips",
+									"value": "71.6.135.131,71.6.135.132"
+								}
+							]
+						},
+						"description": "Check whether a set of IP addresses are \"Internet background noise\", or have been observed scanning or attacking devices across the Internet."
+					},
+					"response": []
+				}
+			],
+			"description": "https://greynoise.io/start",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Virustotal",
+			"item": [
+				{
+					"name": "File Info",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-Apikey",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "74e64c842978dc210fc9c2c1b47230afbdf113a822938bdd591d2a3a3c236f0c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.virustotal.com/api/v3/files/8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+							"protocol": "https",
+							"host": [
+								"www",
+								"virustotal",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3",
+								"files",
+								"8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+							]
+						},
+						"description": "Retrieves information about a file."
+					},
+					"response": []
+				},
+				{
+					"name": "Domain Info",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-apikey",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "74e64c842978dc210fc9c2c1b47230afbdf113a822938bdd591d2a3a3c236f0c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.virustotal.com/api/v3/domains/www.secure.bankofamerica.com-login-sign-in-signonv2screen.go.suzukihaiphong.com.vn",
+							"protocol": "https",
+							"host": [
+								"www",
+								"virustotal",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3",
+								"domains",
+								"www.secure.bankofamerica.com-login-sign-in-signonv2screen.go.suzukihaiphong.com.vn"
+							]
+						},
+						"description": "Retrieves information about an Internet domain."
+					},
+					"response": []
+				},
+				{
+					"name": "Submit URL",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-apikey",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "74e64c842978dc210fc9c2c1b47230afbdf113a822938bdd591d2a3a3c236f0c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "www.secure.bankofamerica.com-login-sign-in-signonv2screen.go.suzukihaiphong.com.vn",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://www.virustotal.com/api/v3/urls",
+							"protocol": "https",
+							"host": [
+								"www",
+								"virustotal",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3",
+								"urls"
+							]
+						},
+						"description": "Analyzes a URL."
+					},
+					"response": []
+				},
+				{
+					"name": "URL Info",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "x-apikey",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "74e64c842978dc210fc9c2c1b47230afbdf113a822938bdd591d2a3a3c236f0c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.virustotal.com/api/v3/urls/30a7c3645e4b009a32c854b830656166c71c00e08e2e7a74264026747bb67a72",
+							"protocol": "https",
+							"host": [
+								"www",
+								"virustotal",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3",
+								"urls",
+								"30a7c3645e4b009a32c854b830656166c71c00e08e2e7a74264026747bb67a72"
+							]
+						},
+						"description": "Retrieves information about a URL."
+					},
+					"response": []
+				}
+			],
+			"description": "https://www.virustotal.com/gui/home/upload",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
