@@ -1,6 +1,4 @@
-# 716infosec
-
-## Example Code for 716 infosec presentation
+# Example Code for 716 infosec presentation
 
 How to setup a virtual environment in VSCode:
 
